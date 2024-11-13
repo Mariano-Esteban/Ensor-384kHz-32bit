@@ -19,6 +19,8 @@ Features:
 •	Directly powered from the Raspberry Pi, no additional power supply
 
 
+
+
 Specifications:
 
 
@@ -39,9 +41,13 @@ Specifications:
 
 
 
+
+
 Developed application:
 
 Stereo audio recorder up to 384kHz - 32 bits
+
+
 
 With a bandwidth of 20Hz to 80kHz, it can be used in the following fields:
 
@@ -55,6 +61,8 @@ With a bandwidth of 20Hz to 80kHz, it can be used in the following fields:
  Monitoring of biodiversity and the environment
 
  Animal behavior analysis
+
+
 
 
 The Ensor-384 card together with the Raspberry Pi card form an automatic audio recording system of very high quality.
