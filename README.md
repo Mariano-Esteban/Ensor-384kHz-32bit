@@ -19,23 +19,24 @@ Features:
 •	Directly powered from the Raspberry Pi, no additional power supply
 
 
-
-
 Specifications:
 
-ADC input voltage Differential,  	2-VRMS full-scale inputs	
 
-ADC input voltage Single-ended, 	1-VRMS full-scale inputs	
+ ADC input voltage Differential,  	2-VRMS full-scale inputs	
 
-ADC signal-to-noise ratio	122db	
+ ADC input voltage Single-ended, 	1-VRMS full-scale inputs	
 
-ADC THD+N	-98db	
+ ADC signal-to-noise ratio	122db	
 
-Frequency response	20Hz-80kHz	
+ ADC THD+N	-98db	
 
-Input gain	0db to 42dB	
+ Frequency response	20Hz-80kHz	
 
-Sample rates	48kHz - 384kHz / 32bit	
+ Input gain	0db to 42dB	
+
+ Sample rates	48kHz - 384kHz / 32bit	
+
+
 
 
 Developed application:
@@ -45,15 +46,15 @@ Stereo audio recorder up to 384kHz - 32 bits
 With a bandwidth of 20Hz to 80kHz, it can be used in the following fields:
 
 
-General purpose high fidelity audio recorder.
+ General purpose high fidelity audio recorder.
 
-Bioacoustics
+ Bioacoustics
 
-Passive acoustic monitoring of wildlife
+ Passive acoustic monitoring of wildlife
 
-Monitoring of biodiversity and the environment
+ Monitoring of biodiversity and the environment
 
-Animal behavior analysis
+ Animal behavior analysis
 
 
 The Ensor-384 card together with the Raspberry Pi card form an automatic audio recording system of very high quality.
