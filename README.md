@@ -113,18 +113,16 @@ Ensor-384 SCH
 
 ![Ensor-384-32bit_sch](https://github.com/user-attachments/assets/295f3e69-c7c7-405f-b348-3a96253d8a15)
 
-
 Ensor-384 PCB
  
 ![Ensor384-32](https://github.com/user-attachments/assets/d96bebc5-13aa-4e0e-9e86-e9cfa4a97657)
-
 ![Ensor-384-32bit_pcb](https://github.com/user-attachments/assets/18768a3a-f827-424d-b6ae-bcc8b3611110)
  
-
 Ensor-384 connected to the Raspberry Pi 3 B+
 Where you can see the two auxiliary inputs
  for two other differential microphones
 They also support unbalanced microphone or line input.
+
 
 ![Ensor384 - RPi3B+](https://github.com/user-attachments/assets/10ea50f8-09e6-45e2-ab53-ffa75a98457f)
 
