@@ -4,7 +4,7 @@ Audio ADC HAT for the Raspberry Pi.
 
 The Ensor-384 is a high-resolution analog-to-digital converter for the Raspberry Pi, support sample rates up to 384kHz/32bit
 
-Features:
+# Features:
 
 •	Dedicated 768kHz/32bit high-quality Burr-Brown ADC. Texas Instruments TLV320ADC6140
 
@@ -19,7 +19,7 @@ Features:
 •	Directly powered from the Raspberry Pi, no additional power supply.
 
 
-Specifications:
+# Specifications:
 
 
      ADC input voltage Differential,  	2-VRMS full-scale inputs	
@@ -37,26 +37,22 @@ Specifications:
      Sample rates	48kHz - 384kHz / 32bit.	
 
 
-Developed application:
+# Developed application:
 
 Stereo audio recorder up to 384kHz - 32 bits
-
-
 
 With a bandwidth of 20Hz to 80kHz, it can be used in the following fields:
 
 
- General purpose high fidelity audio recorder.
+      General purpose high fidelity audio recorder.
 
- Bioacoustics
+      Bioacoustics
 
- Passive acoustic monitoring of wildlife
+      Passive acoustic monitoring of wildlife
 
- Monitoring of biodiversity and the environment
+      Monitoring of biodiversity and the environment
 
- Animal behavior analysis
-
-
+      Animal behavior analysis
 
 
 The Ensor-384 card together with the Raspberry Pi card form an automatic audio recording system of very high quality.
