@@ -4,13 +4,18 @@ Audio ADC HAT for the Raspberry Pi.
 
 The Ensor-384 is a high-resolution analog-to-digital converter for the Raspberry Pi, support sample rates up to 384kHz/32bit
 
-
 Features
+
 •	Dedicated 768kHz/32bit high-quality Burr-Brown ADC. TLV320ADC6140
+
 •	Stereo input. Two differential Microphones onboard IM73A135V01
+
 •	Two optional auxiliary input to balanced and not balanced microphones, or line in
+
 •	Connects directly to the Raspberry Pi, no additional cables needed
+
 •	Compatible with all Raspberry Pi models with a 40-pin GPIO connector
+
 •	Directly powered from the Raspberry Pi, no additional power supply
 
 
