@@ -6,9 +6,9 @@ The Ensor-384 is a high-resolution analog-to-digital converter for the Raspberry
 
 Features
 
-•	Dedicated 768kHz/32bit high-quality Burr-Brown ADC. TLV320ADC6140
+•	Dedicated 768kHz/32bit high-quality Burr-Brown ADC. Texas Instruments TLV320ADC6140
 
-•	Stereo input. Two differential Microphones onboard IM73A135V01
+•	Stereo input. Two differential Microphones onboard. Infineon IM73A135V01
 
 •	Two optional auxiliary input to balanced and not balanced microphones, or line in
 
@@ -20,24 +20,39 @@ Features
 
 
 Specifications
+
 ADC input voltage Differential,  	2-VRMS full-scale inputs	
+
 ADC input voltage Single-ended, 	1-VRMS full-scale inputs	
+
 ADC signal-to-noise ratio	122db	
+
 ADC THD+N	-98db	
+
 Frequency response	20Hz-80kHz	
+
 Input gain	0db to 42dB	
+
 Sample rates	48kHz - 384kHz / 32bit	
 
 
 Developed application:
+
 Stereo audio recorder up to 384kHz - 32 bits
+
 With a bandwidth of 20Hz to 80kHz, it can be used in the following fields:
 
+
 General purpose high fidelity audio recorder.
+
 Bioacoustics
+
 Passive acoustic monitoring of wildlife
+
 Monitoring of biodiversity and the environment
+
 Animal behavior analysis
+
 
 The Ensor-384 card together with the Raspberry Pi card form an automatic audio recording system of very high quality.
 Records 2 audio channels of up to 384000 samples per second and 32 bits per sample
