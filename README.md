@@ -10,37 +10,31 @@ Features:
 
 •	Stereo input. Two differential Microphones onboard. Infineon IM73A135V01
 
-•	Two optional auxiliary input to balanced and not balanced microphones, or line in
+•	Two optional auxiliary input to balanced and not balanced microphones, or line in.
 
-•	Connects directly to the Raspberry Pi, no additional cables needed
+•	Connects directly to the Raspberry Pi, no additional cables needed.
 
-•	Compatible with all Raspberry Pi models with a 40-pin GPIO connector
+•	Compatible with all Raspberry Pi models with a 40-pin GPIO connector.
 
-•	Directly powered from the Raspberry Pi, no additional power supply
-
-
+•	Directly powered from the Raspberry Pi, no additional power supply.
 
 
 Specifications:
 
 
- ADC input voltage Differential,  	2-VRMS full-scale inputs	
+     ADC input voltage Differential,  	2-VRMS full-scale inputs	
 
- ADC input voltage Single-ended, 	1-VRMS full-scale inputs	
+     ADC input voltage Single-ended, 	1-VRMS full-scale inputs	
 
- ADC signal-to-noise ratio	122db	
+     ADC signal-to-noise ratio	122db	
 
- ADC THD+N	-98db	
+     ADC THD+N	-98db	
 
- Frequency response	20Hz-80kHz	
+     Frequency response	20Hz-80kHz	
 
- Input gain	0db to 42dB	
+     Input gain	0db to 42dB	
 
- Sample rates	48kHz - 384kHz / 32bit	
-
-
-
-
+     Sample rates	48kHz - 384kHz / 32bit.	
 
 
 Developed application:
