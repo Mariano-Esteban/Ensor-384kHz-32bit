@@ -91,7 +91,7 @@ The two microphones soldered onto the Ensor-384 board are from Infineon, referen
 These microphones have a bandwidth ranging from 20Hz to 80KHz, which allows them to digitize ultrasounds, for example, those produced by bats.
 
 
-Description of the IM73A135V01 microphone. According to the manufacturer's data sheet:
+Description of the [IM73A135V01](https://www.infineon.com/dgdl/Infineon-IM73A135-DataSheet-v01_00-EN.pdf?fileId=8ac78c8c7f2a768a017fadec36b84500) microphone. According to the manufacturer's data sheet:
 
 
 “The [IM73A135V01](https://www.infineon.com/dgdl/Infineon-IM73A135-DataSheet-v01_00-EN.pdf?fileId=8ac78c8c7f2a768a017fadec36b84500) is designed for applications which require a microphone with high SNR (low self-noise), low distortion (high AOP), which is also IP57 robust to dust and water. Best-in-class Signal to Noise Ratio (SNR) of 73dB(A) enables far field and low volume audio pick-up. The flat frequency response (20Hz low-frequency roll-off) and tight manufacturing tolerance improve the performance of multi-microphone array applications. The high-performance analog microphone ASIC contains an extremely low noise preamplifier and a high-performance differential output amplifier. Different power modes can be selected in order to suit specific current consumption requirements. Each IM73A135V01 microphone is calibrated with an advanced Infineon calibration algorithm, resulting in small sensitivity tolerances (± 1dB).”
