@@ -69,7 +69,7 @@ The Ensor-384 card has two differential microphones MEMS soldered on it for digi
 The Ensor-384 card connects to the Raspberry Pi via the 40-pin GPIO expansion connector
 
 The analog-to-digital converter (ADC) used on the card is the Texas Instruments chip
-TLV320ADC6140, Quad-channel 768-kHz Burr-Brown audio analog-to-digital converter (ADC) with 122-dB SNR
+[TLV320ADC6140](https://www.ti.com/product/TLV320ADC6140), Quad-channel 768-kHz Burr-Brown audio analog-to-digital converter (ADC) with 122-dB SNR
 
 TLV320ADC6140 chip description according to the manufacturer's datasheet:
 
