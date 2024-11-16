@@ -100,7 +100,7 @@ To achieve good stability in the digitalization of the audio signal, a high-qual
 
 [ASTX-H11-24.576MHZ-T](https://abracon.com/Oscillators/ASTX-H11.pdf)
 
-The voltage regulator circuit used to power the analog-to-digital conversion stage of the ADC6140 is the one recommended by Texas Instruments due to its excellent features, reference:
+The voltage regulator circuit used to power the analog-to-digital conversion stage of the TLV320ADC6140 is the one recommended by Texas Instruments due to its excellent features, reference:
 
 [TPS73533QDRBRQ1](https://www.ti.com/product/TPS735-Q1). Automotive 500-mA, low-noise, low-IQ, low-dropout voltage regulator with enable
 
