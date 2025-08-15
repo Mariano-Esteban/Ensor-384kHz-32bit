@@ -1,1 +1,3 @@
 
+The recording of the file "sunrise_384kHz-32bits_8s.wav" was made with the Raspberry Pi 5 card and the Ensor-384 card.
+The power supply used was the L&I P0520 power bank.
