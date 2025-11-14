@@ -17,7 +17,7 @@ We'll remove the speakers and replace them with two INFINEON “IM73A135V01” a
 
 These are the two microphones:
 
-![Fig. 1](Mariano-Esteban/Ensor-384kHz-32bit/Binaural recording/binuaral_images/1.jpg)
+![Fig. 1](Mariano-Esteban/Ensor-384kHz-32bit/Binaural recording/binaural_images/1.jpg)
 
 
 
