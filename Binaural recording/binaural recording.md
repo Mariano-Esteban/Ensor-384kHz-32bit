@@ -63,7 +63,7 @@ As shown in the following image.
 
 
 ![Fig. 8](binaural_images/8.jpg)
-
+![Fig. 9](binaural_images/9.jpg)
 
 
 4\. Insert the stripped end of the audio cable through the hole on the bottom of the headphones.
