@@ -17,19 +17,25 @@ We'll remove the speakers and replace them with two INFINEON “IM73A135V01” a
 
 These are the two microphones:
 
-![Fig. 1](/binaural_images/1.jpg)
-
+![Fig. 1](binaural_images/1.jpg)
 
 
 And these are the headphones I bought on AliExpress.
 
 [https://es.aliexpress.com/item/1005008562014087.html?spm=a2g0o.order\_list.order\_list\_main.29.6fa5194dLEUutc\&gatewayAdapt=glo2esp](https://es.aliexpress.com/item/1005008562014087.html?spm=a2g0o.order_list.order_list_main.29.6fa5194dLEUutc&gatewayAdapt=glo2esp)
 
+![Fig. 2](binaural_images/2.jpg)
+![Fig. 3](binaural_images/3.jpg)
+
 We will remove the speakers from these headphones and place two INFINEON “IM73A135V01” analog differential microphones inside. We will also drill a 3mm diameter hole in the center of the outer part of each earcup, which will align with the microphone input hole located inside.
 
 Each microphone will have a soldered 4-wire audio cable, and at the other end of the cable will be a 4-ring male audio connector.
 
 [https://es.aliexpress.com/item/1005006762462706.html?spm=a2g0o.order\_list.order\_list\_main.22.6fa5194dLEUutc\&gatewayAdapt=glo2esp](https://es.aliexpress.com/item/1005006762462706.html?spm=a2g0o.order_list.order_list_main.22.6fa5194dLEUutc&gatewayAdapt=glo2esp)
+
+
+![Fig. 4](binaural_images/4.jpg)
+
 
 This cable has a male connector on one end and a female connector on the other.
 
@@ -43,11 +49,22 @@ The two female connectors on each cable will be connected to microphone inputs 2
 
 First, cut the wires at the edge of the earbuds, remove the ear pads, and then remove the speaker covers. These covers simply have three pegs to attach to the base. They aren't glued, but you have to pull firmly to remove them. Remove the covers carefully, as the pegs can break. I broke two.
 
+![Fig. 5](binaural_images/5.jpg)
+
+
 2\. Drill a 3mm diameter drill bit into the back of the headphones.
 
 As shown in the following image.
 
+![Fig. 6](binaural_images/6.jpg)
+![Fig. 7](binaural_images/7.jpg)
+
 3.- Glue the two Infineon microphones to the inside of the headphones, making sure that the microphone hole is aligned with the hole drilled in the headphone.
+
+
+![Fig. 8](binaural_images/8.jpg)
+![Fig. 9](binaural_images/9.jpg)
+
 
 4\. Insert the stripped end of the audio cable through the hole on the bottom of the headphones.
 
@@ -64,6 +81,11 @@ Green wire – MICN
 Copper wire – GND
 
 5.- Fully assemble the headphones.
+
+
+![Fig. 10](binaural_images/10.jpg)
+![Fig. 11](binaural_images/11.jpg)
+
 
 Next, we'll put on the headphones and connect them to the Ensor-384 sound card mounted on the Raspberry Pi, which is powered by a power bank.
 
