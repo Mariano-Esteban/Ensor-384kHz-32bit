@@ -17,6 +17,10 @@ We'll remove the speakers and replace them with two INFINEON “IM73A135V01” a
 
 These are the two microphones:
 
+![Fig. 1](binuaral_images/1.jpg)
+
+
+
 And these are the headphones I bought on AliExpress.
 
 [https://es.aliexpress.com/item/1005008562014087.html?spm=a2g0o.order\_list.order\_list\_main.29.6fa5194dLEUutc\&gatewayAdapt=glo2esp](https://es.aliexpress.com/item/1005008562014087.html?spm=a2g0o.order_list.order_list_main.29.6fa5194dLEUutc&gatewayAdapt=glo2esp)
