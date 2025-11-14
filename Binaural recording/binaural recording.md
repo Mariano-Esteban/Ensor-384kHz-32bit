@@ -83,8 +83,7 @@ Copper wire – GND
 5.- Fully assemble the headphones.
 
 
-![Fig. 10](binaural_images/10.jpg)
-![Fig. 11](binaural_images/11.jpg)
+
 
 
 Next, we'll put on the headphones and connect them to the Ensor-384 sound card mounted on the Raspberry Pi, which is powered by a power bank.
