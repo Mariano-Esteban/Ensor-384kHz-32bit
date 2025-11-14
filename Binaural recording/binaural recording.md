@@ -1,4 +1,4 @@
-[binaural recording.md](https://github.com/user-attachments/files/23553043/binaural.recording.md)
+
 **Binaural recording**
 
 According to Wikipedia:
