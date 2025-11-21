@@ -128,9 +128,9 @@ rock-5c\_bookworm\_cli\_b1.output.img.xz
 
 The USB flash drive will be used to store the audio recordings
 
-1 hour of audio recording, 2 stereo channels at 192000 m/s and 32-bit resolution, takes up 5.4 GB
+1 hour of audio recording, 2 stereo channels at 192000 S/s and 32-bit resolution, takes up 5.4 GB
 
-1 hour of audio recording, 2 stereo channels at 384000 m/s and 32-bit resolution, takes up 10.8 GB
+1 hour of audio recording, 2 stereo channels at 384000 S/s and 32-bit resolution, takes up 10.8 GB
 
 8\. Mount the USB drive at system startup
 
