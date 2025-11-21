@@ -52,4 +52,8 @@ Based on these, I created a tetrahedral 3D stand to mount four Infineon IM73A135
 
 This is how the Ensor-Ambisonics microphone turned out.
 
+![Fig. 1](1.jpg)
+![Fig. 2](2.jpg)
+![Fig. 3](3.jpg)
+
 The .stl file can be downloaded for anyone who wants to print it.
