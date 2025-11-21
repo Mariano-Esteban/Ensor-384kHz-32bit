@@ -55,7 +55,7 @@ It should look like this:
 
 	# Command:
 
-	# disable_service \<systemd unit name\>
+	# disable_service <systemd unit name>
 
 	#  
 	#disable_service ssh
