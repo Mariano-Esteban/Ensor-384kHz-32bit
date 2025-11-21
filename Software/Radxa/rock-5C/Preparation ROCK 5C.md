@@ -6,7 +6,7 @@
 
 \- Original Radxa Power Supply with USB-C Cable
 
-\- rock-5c\_bookworm\_cli\_b1.output.img.xz Operating System
+\- rock-5c_bookworm_cli_b1.output.img.xz Operating System
 
 \- RJ45 Ethernet Cable
 
@@ -20,13 +20,13 @@
 
 \- Ensor-384 Sound Recorder Card
 
-\- The ensor384\_rock\_5C.zip file downloaded from the internet
+\- The ensor384_rock_5C.zip file downloaded from the internet
 
 \- 64GB or larger USB flash drive, formatted in exFAT for recordings
 
-\- The ensor384\_rock\_5C.zip file will be extracted to the USB flash drive
+\- The ensor384_rock_5C.zip file will be extracted to the USB flash drive
 
-2\. Install the operating system "rock-5c\_bookworm\_cli\_b1.output.img.xz" without a desktop environment.
+2\. Install the operating system "rock-5c_bookworm_cli_b1.output.img.xz" without a desktop environment.
 
 Use the balenaEtcher application from Linux to write the image.
 
@@ -45,24 +45,24 @@ config.txt
 
 Simply comment out the following lines:
 
-	disable\_service ssh  
-	disable\_service smbd  
-	disable\_service nmbd
+	disable_service ssh  
+	disable_service smbd  
+	disable_service nmbd
 
 It should look like this:
 
-	\# Disable services
+	# Disable services
 
-	\# Command:
+	# Command:
 
-	\# disable\_service \<systemd unit name\>
+	# disable_service \<systemd unit name\>
 
-	\#  
-	\#disable\_service ssh
+	#  
+	#disable_service ssh
 
-	disable\_service smbd
+	disable_service smbd
 
-	disable\_service nmbd
+	disable_service nmbd
 
 Insert the microSD card into the radxa ROCK 5C and check that it is properly inserted
 
@@ -91,7 +91,7 @@ sudo apt install nmap
 
 To scan a local network (for example, 192.168.1.0/24), you can use the following command: 
 
-nmap \-sn 192.168.0.0/24 
+nmap -sn 192.168.0.0/24 
 
 Starting Nmap 7.80 (https://nmap.org) at 2024-08-23 19:14 CEST   
 Nmap scan report for 192.168.0.1   
@@ -110,7 +110,7 @@ Verify that PuTTY is working.
 
 All the following commands will be executed via SSH using PuTTY.
 
-6\. Important\!\!\! DO NOT update the rock-5C operating system
+6\. Important!!! DO NOT update the rock-5C operating system
 
 because it will cause TDM to stop working
 
@@ -118,13 +118,13 @@ The operating system that works correctly is the following Debian image:
 
 ROCK 5C Lite CLI System Image: Debian 12 CLI b1
 
-rock-5c\_bookworm\_cli\_b1.output.img.xz
+rock-5c_bookworm_cli_b1.output.img.xz
 
 7\. Check the label of the exFAT formatted USB flash drive
 
-	sudo fdisk \-l
+	sudo fdisk -l
 
-		\> /dev/sda1
+		> /dev/sda1
 
 The USB flash drive will be used to store the audio recordings
 
@@ -138,15 +138,15 @@ The USB flash drive will be mounted in the following path:
 
 /media/rock/Ensor384
 
-Create \`rock/Ensor384\` directories in \`/media
+Create \`rock/Ensor384\` directories in /media
 
-	sudo mkdir \-p /media/rock/Ensor384
+	sudo mkdir -p /media/rock/Ensor384
 
 Full permissions enabled for everyone
 
-	sudo chmod \-R 777 /media/rock/Ensor384
+	sudo chmod -R 777 /media/rock/Ensor384
 
-Edit and add the line to the \`/etc/fstab\` file
+Edit and add the line to the /etc/fstab file
 
 	sudo nano /etc/fstab
 
@@ -154,7 +154,7 @@ Edit and add the line to the \`/etc/fstab\` file
 
 Verify that the modifications to \`/etc/fstab\` are correct
 
-	sudo mount \-a  
+	sudo mount -a  
 	sudo systemctl daemon-reload
 
 	sudo reboot
@@ -171,11 +171,11 @@ and the "Ensor" directory, which should be copied to:
 
 /home/rock/
 
-	cp \-dr /media/rock/Ensor384/Ensor /home/rock/
+	cp -dr /media/rock/Ensor384/Ensor /home/rock/
 
 Once the Ensor directory is copied, you can delete it from the USB drive if desired.
 
-	rm \-dr /media/rock/Ensor384/Ensor
+	rm -dr /media/rock/Ensor384/Ensor
 
 10\. Compile MRAA to manage the GPIO pins of the 40-pin connector
 
@@ -189,16 +189,16 @@ Uninstall the system stock package:
 
 	cd /
 
-	sudo apt purge \*mraa\* 
+	sudo apt purge *mraa* 
 
 Source code installation 
 
-	sudo apt-get update \-y   
-	sudo apt-get install git cmake build-essential swig python3-dev libnode-dev cmake libjson-c-dev libgtest-	dev pkg-config cmake-data \-y 
+	sudo apt-get update -y   
+	sudo apt-get install git cmake build-essential swig python3-dev libnode-dev cmake libjson-c-dev libgtest-dev pkg-config cmake-data -y 
 
 	sudo git clone https://github.com/nascs/mraa.git   
-	mraa cd   
-	sudo git checkout \-b Add\_Radxa\_ROCK5C\_Support origin/Add\_Radxa\_ROCK5C\_Support   
+	cd mraa   
+	sudo git checkout -b Add_Radxa_ROCK5C_Support origin/Add_Radxa_ROCK5C_Support   
 	sudo mkdir build && cd build   
 	sudo cmake .. && sudo make ${nproc} && sudo make install && sudo ldconfig
 
@@ -234,12 +234,12 @@ Load the DTS file from the "Ensor-384" audio recording card using \`rsetup\`
 
 12\. Reboot the system and verify that the ENSOR-384 recording card has been installed
 
-		arecord \-l
+		arecord -l
 
 		Test that card is 2 y device is 0
 
 		  
-13.- Verify that the card records audio at a sampling rate of 192000 samples/s and 32 bits
+13.- Verify that the card records audio at a sampling rate of 192000 Samples/s and 32 bits
 
  The recording program is located in /home/rock/Ensor/tdm.py
 
@@ -268,20 +268,21 @@ We will create the file /etc/systemd/system/init.service
 
 	sudo nano /etc/systemd/system/init.service
 
-		\[Unit\]
+		[Unit]
 
 		Description=recorder service
 
-		\#After=network.target network-online.target
+		#After=network.target network-online.target
 
-		\#Wants=network-online.target
+		#Wants=network-online.target
 
-		\[Service\]
+		[Service]
 
 		ExecStart=/home/rock/Ensor/recorder.sh
 
-		\[Install\]  
-		WantedBy=multi-user.target  
+		[Install]  
+		WantedBy=multi-user.target 
+		
 Enable init.service to start when the system boots
 
 	sudo systemctl enable /etc/systemd/system/init.service
@@ -290,19 +291,19 @@ Enable init.service to start when the system boots
 
 	nano /home/rock/Ensor/recorder.sh
 
-		\#\!/bin/sh
+		#!/bin/sh
 
-		\#sudo /home/ensor/Ensor/tdm.py
+		#sudo /home/ensor/Ensor/tdm.py
 
-		\#sudo /home/ensor/Ensor/eea.py
+		#sudo /home/ensor/Ensor/eea.py
 
-		\#sudo shutdown \-h now
+		#sudo shutdown -h now
 
 Only enable the program you need.
 
 If you want the system to shut down when recording is complete, enable the following line:
 
-	sudo shutdown \-h now
+	sudo shutdown -h now
 
 This script starts recording according to the ensor.conf configuration and, when finished, shuts down the system to save power.
 
@@ -312,13 +313,13 @@ from rock-5c:
 
 Check uSD card 
 
-	sudo fdisk \-l 
+	sudo fdisk -l 
 
 		Disk /dev/mmcblk1: 7.4 GiB, 7948206080 bytes, 15523840 sectors   
-		Units: sectors of 1 \* 512 \= 512 bytes   
+		Units: sectors of 1 * 512 = 512 bytes   
 		Sector size (logical/physical): 512 bytes / 512 bytes   
 		I/O size (minimum/optimal): 512 bytes / 512 bytes   
 		Disklabel type: gpt   
 		Disk identifier: 3B224E8F-6BA8-4923-AB39-B84CF5D0E668 
 
-sudo dd if=/dev/mmcblk1 of=/media/rock/Ensor384/Ensor384\_rock5C.img bs=4M status=progress
+sudo dd if=/dev/mmcblk1 of=/media/rock/Ensor384/Ensor384_rock5C.img bs=4M status=progress
