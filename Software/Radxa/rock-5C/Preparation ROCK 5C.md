@@ -214,13 +214,13 @@ GPIO
 
 Enable the following DTS:
 
-\*Enable I2C8-M2
+*Enable I2C8-M2
 
 	rsetup  
 		overlays  
 			Manage overlays
 
-				\*Enable I2C8-M2
+				*Enable I2C8-M2
 
 Load the DTS file from the "Ensor-384" audio recording card using \`rsetup\`
 
