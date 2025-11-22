@@ -43,11 +43,9 @@ config.txt
 
 3\. Edit the before.txt file, Radxa First Boot Configuration, to enable the SSH service, which is disabled by default.
 
-Simply comment out the following lines:
+Simply comment out the following line:
 
 	disable_service ssh  
-	disable_service smbd  
-	disable_service nmbd
 
 It should look like this:
 
@@ -63,6 +61,8 @@ It should look like this:
 	disable_service smbd
 
 	disable_service nmbd
+
+
 
 Insert the microSD card into the radxa ROCK 5C and check that it is properly inserted
 
