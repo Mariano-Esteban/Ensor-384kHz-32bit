@@ -257,7 +257,7 @@ For 2-channel I2S (stereo) recording:
 
 	sudo /home/rock/Ensor/eea.py
 
-Try recording with the default settings of 192000 m/s and 32 bits.  
+Try recording with the default settings of 192000 Samples/s and 32 bits.  
 The recording will be a 10-second file.
 
 13\. Recording at System Boot
