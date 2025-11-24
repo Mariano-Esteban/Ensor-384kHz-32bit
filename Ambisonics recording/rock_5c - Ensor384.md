@@ -38,7 +38,7 @@ I've tested it, and it works perfectly.
 
 **Ambisonics Recording**
 
-The rock-5c card, along with the Ensor-384 card, can be used to perform first-grade Ambisonic recording tests with four differential microphones identical to those on the Ensor-384 card, at 192kHz/32bit.
+The rock-5c card, along with the Ensor-384 card, can be used to perform first-order Ambisonic recording tests with four differential microphones identical to those on the Ensor-384 card, at 192kHz/32bit.
 
 I've noticed that some of the most commonly used microphones for Ambisonic recordings are the Rode NT-SF1
 
