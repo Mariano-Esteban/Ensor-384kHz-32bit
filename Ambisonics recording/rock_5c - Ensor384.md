@@ -57,3 +57,35 @@ This is how the Ensor-Ambisonics microphone turned out.
 ![Fig. 3](Ambisonics_images/3.jpg)
 
 The .stl file can be downloaded for anyone who wants to print it.
+
+As an Ambisonics audio processor we will use the 'SoundField by RØDE' plugin
+
+The 'SoundField by RØDE' plugin offers a revolutionary approach to ambisonic processing and delivers the most accurate ambisonic rendering available in the world. An intuitive interface coupled with legendary RØDE accessibility makes the 'SoundField by RØDE' plug-in incredibly easy to use, unlocking a world of creative possibility for any sound recordist.
+The 'SoundField by RØDE' plugin operates in a completely different way to traditional ambisonic processors. Eschewing the matrices and correction filters of previous generations, it utilises state-of-the-art frequency-domain processing to deliver unparalleled spatial accuracy at all frequencies.
+
+**Specifications**
+
+**Input Format**
+
+A-Format™, B-Format™ (FuMa), B-Format™ (Ambix)
+
+**Output Format**
+
+B-Format™ (FuMa), B-Format™ (Ambix), Mono, Stereo, 5.1, 7.1, 5.1.2, 7.1.2, 5.1.4, 7.1.4
+
+**OS Requirements**
+
+Windows 10, macOS 10.11 or higher
+
+**Plugin Type**
+
+VST, AAX (Windows & macOS) Audio Units (macOS only)
+
+**Supported host applications**
+
+Avid ProTools 12.8, Steinberg Cubase 9, Steinberg Nuendo 8, Cockos Reaper 5 (Windows & MacOS) Apple Logic Pro X 10.4, Apple Final Cut Pro X 10.4 (macOS only)
+
+https://rode.com/en-us/apps/soundfield-by-rode
+
+
+
