@@ -1,3 +1,0 @@
-Device,Page,Register Address,Register Name,Register Value,
-A,0,0x01,SW_RESET,0x01,
-A,0,0x01,SW_RESET,0x00,

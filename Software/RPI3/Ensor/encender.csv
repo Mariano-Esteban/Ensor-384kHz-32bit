@@ -1,2 +1,0 @@
-Device,Page,Register Address,Register Name,Register Value,
-A,0,0x75,PWR_CFG,0xe0,
