@@ -55,6 +55,10 @@ This is how the Ensor-Ambisonics microphone turned out.
 ![Fig. 1](Ambisonics_images/1.jpg)
 ![Fig. 2](Ambisonics_images/2.jpg)
 ![Fig. 3](Ambisonics_images/3.jpg)
+![Fig. 4](Ambisonics_images/4.jpg)
+![Fig. 5](Ambisonics_images/5.jpg)
+![Fig. 6](Ambisonics_images/6.jpg)
+
 
 The .stl file can be downloaded for anyone who wants to print it.
 
