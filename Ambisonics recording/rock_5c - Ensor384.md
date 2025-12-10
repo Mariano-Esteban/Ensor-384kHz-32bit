@@ -60,9 +60,10 @@ This is how the Ensor-Ambisonic microphone turned out.
 ![Fig. 6](Ambisonics_images/6.jpg)
 ![Fig. 7 ](Ambisonics_images/7.jpg)
 
-Complete recording equipment, with aluminum case, 7Ah battery, rock-5C card and Ensor-Ambisonic microphone
+Complete recording equipment, with aluminum case, 7Ah battery, rock-5C card and Ensor-Ambisonic microphone.
 
 
+**3D printing**
 The .stl file can be downloaded for anyone who wants to print it.
 
 As an Ambisonics audio processor we will use the 'SoundField by RØDE' plugin
