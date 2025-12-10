@@ -50,7 +50,7 @@ and the Sennheiser AMBEO VR Mic
 
 Based on these, I created a tetrahedral 3D stand to mount four Infineon IM73A135V01 MEMS differential microphones, oriented in the same way as the professional ones.
 
-This is how the Ensor-Ambisonics microphone turned out.
+This is how the Ensor-Ambisonic microphone turned out.
 
 ![Fig. 1](Ambisonics_images/1.jpg)
 ![Fig. 2](Ambisonics_images/2.jpg)
@@ -58,9 +58,9 @@ This is how the Ensor-Ambisonics microphone turned out.
 ![Fig. 4](Ambisonics_images/4.jpg)
 ![Fig. 5](Ambisonics_images/5.jpg)
 ![Fig. 6](Ambisonics_images/6.jpg)
-!["Fig. 7" ](Ambisonics_images/7.jpg)
+![Fig. 7 ](Ambisonics_images/7.jpg)
 
-Complete recording equipment, with aluminum case, 7Ah battery, rock-5C card and ambisonic microphone
+Complete recording equipment, with aluminum case, 7Ah battery, rock-5C card and Ensor-Ambisonic microphone
 
 
 The .stl file can be downloaded for anyone who wants to print it.
