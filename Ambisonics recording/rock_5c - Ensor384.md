@@ -64,6 +64,7 @@ Complete recording equipment, with aluminum case, 7Ah battery, rock-5C card and 
 
 
 **3D printing**
+
 The .stl file can be downloaded for anyone who wants to print it.
 
 As an Ambisonics audio processor we will use the 'SoundField by RØDE' plugin
