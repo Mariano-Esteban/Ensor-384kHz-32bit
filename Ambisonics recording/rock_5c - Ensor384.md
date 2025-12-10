@@ -67,6 +67,8 @@ Complete recording equipment, with aluminum case, 7Ah battery, rock-5C card and 
 
 The .stl file can be downloaded for anyone who wants to print it.
 
+**Ambisonics audio processor**
+
 As an Ambisonics audio processor we will use the 'SoundField by RØDE' plugin
 
 The 'SoundField by RØDE' plugin offers a revolutionary approach to ambisonic processing and delivers the most accurate ambisonic rendering available in the world. An intuitive interface coupled with legendary RØDE accessibility makes the 'SoundField by RØDE' plug-in incredibly easy to use, unlocking a world of creative possibility for any sound recordist.
