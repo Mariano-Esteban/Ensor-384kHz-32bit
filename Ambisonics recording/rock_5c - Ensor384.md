@@ -67,6 +67,8 @@ Complete recording equipment, with aluminum case, 7Ah battery, rock-5C card and 
 
 The .stl file can be downloaded for anyone who wants to print it.
 
+Ambisonics recording/dual microphone stand/mic_2.stl
+
 **Ambisonics audio processor**
 
 As an Ambisonics audio processor we will use the 'SoundField by RØDE' plugin
