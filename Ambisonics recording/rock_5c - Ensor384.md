@@ -58,6 +58,7 @@ This is how the Ensor-Ambisonics microphone turned out.
 ![Fig. 4](Ambisonics_images/4.jpg)
 ![Fig. 5](Ambisonics_images/5.jpg)
 ![Fig. 6](Ambisonics_images/6.jpg)
+![Fig. 7  -  Complete recording equipment, with aluminum case, 7Ah battery, rock-5C card and ambisonic microphone](Ambisonics_images/7.jpg)
 
 
 The .stl file can be downloaded for anyone who wants to print it.
