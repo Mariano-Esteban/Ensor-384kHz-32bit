@@ -9,14 +9,19 @@ This audio ADC card for the Raspberry Pi 5 allows capturing eight channels of au
 Simultaneous recording capabilities are as follows:
 
 Up to 8 channels at 48kHz 32-bit
+
 Up to 8 channels at 96kHz 32-bit
+
 Up to 8 channels at 192kHz 32-bit
+
 Up to 8 channels at 384kHz 32-bit
 
 When recording in 16-bit, up to 16 audio channels can be recorded:
 
 Up to 16 channels at 48kHz 16-bit
+
 Up to 16 channels at 96kHz 16-bit
+
 Up to 16 channels at 192kHz 16-bit
 
 
