@@ -4,6 +4,8 @@ Audio ADC HAT for the Raspberry Pi 5.
 
 The Ensor-16_Channels is a high-resolution analog-to-digital converter for the Raspberry Pi 5.
 
+![Ensor-384-32bit_sch](https://github.com/user-attachments/assets/295f3e69-c7c7-405f-b348-3a96253d8a15)
+
 This audio ADC card for the Raspberry Pi 5 allows capturing eight channels of audio simultaneously up to 384kHz/32-bit or up to 16 channels of audio simultaneously up to 192kHz/16-bit. The card has four Texas Instruments TLV320ADC6140 analog-to-digital converters, the same one used in the Ensor-384 card, whose I2S audio outputs are connected to the four I2S inputs of the RPi5: SDI0, SDI1, SDI2, and SDI3.
 
 Simultaneous recording capabilities are as follows:
