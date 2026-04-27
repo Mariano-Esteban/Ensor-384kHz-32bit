@@ -1,4 +1,4 @@
-##Ensor-16_Channels + Raspberry Pi 5 (Kernel 6.12.25)
+## Ensor-16_Channels + Raspberry Pi 5 (Kernel 6.12.25)
 
 Preparation Sequence for Setting Up a Raspberry Pi 5 to Work with the "Ensor-16_Channels" Audio Recorder
 
