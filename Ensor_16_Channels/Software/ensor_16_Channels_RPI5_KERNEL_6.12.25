@@ -195,6 +195,7 @@ card 0: i2s_Ensor-16-channels [i2s_Ensor-16-channels], device 0:
 These are the parameters required for the recording program.
 
 /home/ensor/Ensor/master_8ch_32bit.py
+
 11. Verify that the card records audio at a sampling rate of 384000 m/s and 32 bits.
 
 The recording program is located in /home/ensor/Ensor/master_8ch_32bit.py.
