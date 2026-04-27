@@ -1,0 +1,353 @@
+##Ensor-16_Channels + Raspberry Pi 5 (Kernel 6.12.25)
+
+Preparation Sequence for Setting Up a Raspberry Pi 5 to Work with the "Ensor-16_Channels" Audio Recorder
+
+1. Required Elements
+
+- Raspberry Pi 5
+
+- Original Raspberry Pi Power Supply
+
+- Original 8GB Micro SD Card + USB Micro SD Writer
+
+- 64GB or Larger USB Flash Drive
+
+- A Computer with an Internet Connection and Windows or Linux OS
+
+- The ensor_16_Channels_RPI5_KERNEL_6.12.25.zip file downloaded from GitHub
+
+2. Installing the Raspberry Pi OS Lite (64-bit) Operating System (without desktop environment) for Raspberry Pi 5
+
+Use Raspberry Pi Imager, configuring the username and password, and
+
+enabling SSH server
+
+Username: ensor
+Password: ******** (any password)
+
+It is recommended to use PuTTY for this. Send commands via SSH to the Raspberry Pi
+
+3. Connect the Ensor-16_Channels board to the Raspberry Pi and then connect the Raspberry Pi to the internet using an Ethernet cable. Power on the system.
+
+3. Update the operating system
+
+sudo apt update
+sudo apt full-upgrade
+
+4. Run sudo raspi-config
+
+Enable autologin with console in the new kernel (6.12.25) 1 – S6
+Enable SSH 3 - I1
+Enable I2C 3 - I5
+Expand filesystem 6 - A1
+
+sudo reboot
+
+5. Connect a USB flash drive, with a capacity of 64GB or more, to the RPi5 board and check its label. The USB flash drive will be formatted later in exFAT.
+
+sudo fdisk -l
+
+> /dev/sda1
+
+The USB flash drive will be used to store the audio recordings.
+
+1 hour of audio recording, 2 stereo channels at 192000 m/s and 32 bits, occupies 5.4 GB
+
+1 hour of audio recording, 2 stereo channels at 384000 m/s and 32 bits, occupies 10.8 GB
+
+6. Mount the USB flash drive at system startup
+
+The USB flash drive will be mounted in the following path:
+
+/media/ensor/Ensor384
+
+Create the directories sensor and sensor/Ensor384 in /media
+
+sudo mkdir -p /media/ensor/Ensor384
+
+Full permissions enabled for everyone
+
+sudo chmod -R 777 /media/ensor/Ensor384
+
+Add the following line to the file /etc/fstab
+
+sudo nano /etc/fstab
+
+/dev/sda1 /media/ensor/Ensor384 auto auto,user,rw,umask=000,nofail,x-system.device-timeout=10 0 0
+
+Verify that the modifications to /etc/fstab are correct
+
+sudo mount -a
+
+sudo systemctl daemon-reload
+
+sudo reboot
+
+To verify that the USB flash drive mounts correctly
+
+
+7. Format the USB flash drive in exFAT
+
+This operation can be easily performed on Windows,
+or on Linux, as follows:
+
+sudo mkfs.exfat -n LABEL /dev/sdXn
+
+in our case
+
+sudo fdisk -l to see /dev/sdXn
+
+sudo mkfs.exfat -n Ensor384 /dev/sda1
+
+From a Linux or Windows computer:
+
+Download the compressed file  ensor_16_Channels_RPI5_KERNEL_6.12.25.zip from the internet, which includes the Ensor directory and the audio configuration file ensor.conf
+
+Unzip ensor_16_Channels_RPI5_KERNEL_6.12.25.zip and copy the ensor.conf file and the Ensor directory to the USB flash drive
+
+Connect the USB flash drive to the Raspberry Pi and power on the system
+
+The configuration file will be on the USB flash drive Recording:
+
+sensor.conf
+
+and the Ensor directory, which will be copied to:
+
+/home/ensor/
+
+cp -dr /media/ensor/Ensor384/Ensor /home/ensor/
+
+Once the Ensor directory is copied, it can be deleted from the USB flash drive if desired:
+
+rm -dr /media/ensor/Ensor384/Ensor
+
+To record files larger than 4GB:
+
+Install the exfat-fuse program on the Raspberry Pi:
+
+sudo apt install exfat-fuse
+
+8. Select the DTS file corresponding to the required sampling rate.
+
+The following DTS files are located in the /home/Ensor/dts_32bit folder:
+
+i2s0_8ch_48kHz_32bit_master.dts
+i2s0_8ch_96kHz_32bit_master.dts
+i2s0_8ch_192kHz_32bit_master.dts
+i2s0_8ch_384kHz_32bit_master.dts
+
+The corresponding compiled files are also located there:
+
+i2s0_8ch_48kHz_32bit_master.dtbo
+i2s0_8ch_96kHz_32bit_master.dtbo
+i2s0_8ch_192kHz_32bit_master.dtbo
+i2s0_8ch_384kHz_32bit_master.dtbo
+
+For recording 8 channels at 384kHz 32-bit.
+
+Copy the compiled DTS file (i2s0_8ch_384kHz_32bit_master.dtbo) from the "Ensor-16_Channels" audio recording card to /boot/firmware/overlays.
+
+The i2s0_8ch_384kHz_32bit_master.dtbo file is located in the /home/ensor/Ensor/dts_32bit directory.
+
+/home/ensor/Ensor/dts_32bit/i2s0_8ch_384kHz_32bit_master.dts
+
+We will need to compile it with the following command:
+
+sudo dtc -@ -H epapr -O dtb -o i2s0_8ch_384kHz_32bit_master.dtbo -Wno-unit_address_vs_reg i2s0_8ch_384kHz_32bit_master.dts 
+
+and the compiled file i2s0_8ch_384kHz_32bit_master.dtbo copy it to /boot/firmware/overlays/ 
+
+sudo cp /home/ensor/Ensor/dts_32bit/ i2s0_8ch_384kHz_32bit_master.dtbo /boot/firmware/overlays/
+
+9. Modify the file /boot/firmware/config.txt
+
+sudo nano /boot/firmware/config.txt
+
+dtparam=i2c=on
+
+dtparam=i2s=on
+gpio=4=op,dh
+
+dtoverlay=i2s0_8ch_384kHz_32bit_master
+
+#Disable the default audio cards
+
+#dtparam=audio=on
+
+#The following line cannot be disabled because the screen will not work upon restarting
+
+dtoverlay=vc4-kms-v3d
+
+#Disable Wi-Fi and Bluetooth to avoid noise and power consumption
+
+dtoverlay=disable-wifi
+
+dtoverlay=disable-bt
+
+10. Reboot the system and verify that the "i2s_Ensor-16-channels" recording card has been installed
+
+arecord -l
+
+verify that card is 0 and device es 0
+
+card 0: i2s_Ensor-16-channels [i2s_Ensor-16-channels], device 0:
+
+These are the parameters required for the recording program.
+
+/home/ensor/Ensor/master_8ch_32bit.py
+11. Verify that the card records audio at a sampling rate of 384000 m/s and 32 bits.
+
+The recording program is located in /home/ensor/Ensor/master_8ch_32bit.py.
+
+The recording configuration file, ensor.conf, is located on the USB flash drive.
+
+If the USB flash drive does not have the ensor.conf configuration file, the master_8ch_32bit.py program creates a default one with the data shown below, and the program will run with that data.
+
+By default, the system does not record until "record=yes" is specified.
+
+Recording parameters can be modified with any text editor.
+
+nano /media/ensor/Ensor384/ensor.conf
+
+[DEFAULT]
+record = no #enables recording or not <yes, no>
+
+#by default, does not record
+date = 27/04/2026 #date of the recording
+file_name = test_384kHz_32bits #filename
+
+[sound.format]
+
+sampling = 384000 #sampling frequency in Hz
+
+bits = 32 #number of bits per sample, fixed at 32 bits
+
+[record.time]
+
+total_time = 10 #total recording time in seconds
+file_time = 10 #since the files are very large, it's useful to split them into several
+
+delay = 0 #wait time, in seconds, from the start, before recording Start recording
+
+index = 0
+#index of possible recordings
+
+#to be made on the same day; each recording increments
+
+#the index by one
+
+[channel.selection]
+#selection of channels to record
+
+channel_1 = yes
+#only 2 channels can be selected
+
+channel_2 = yes
+
+channel_3 = no
+
+channel_4 = no
+
+[gain.channels]
+#gain of the channels in dB
+
+channel_1 = 42
+#the range of allowed values is from 0dB to 42dB
+
+channel_2 = 42
+
+channel_3 = 0
+
+channel_4 = 0
+
+[aux_channels.type]
+
+possible_options = microphone, line_in
+
+aux_ch2_type = microphone
+
+aux_ch3_type = microphone
+
+[aux_channels.input_class]
+
+possible_options = differential, single-ended
+
+aux_ch2_input_class = differential
+
+aux_ch3_input_class = differential
+
+[aux_channels.input_impedance]
+
+possible_options = 2K5, 10K, 20K
+
+aux_ch2_zin = 2K5
+
+aux_ch3_zin = 2K5
+
+A directory structure will be created based on the current date, and filenames will depend on the current hour and minute, ending with the file number.
+
+Modify the configuration file to enable recording:
+
+nano /media/ensor/Ensor384/ensor.conf
+
+[DEFAULT]
+
+record = yes #enables recording or not <yes, no>
+
+. . . #by default, it does not record
+
+And try recording:
+
+sudo /home/ensor/Ensor/master_8ch_32bit.py
+
+It is necessary to use sudo to modify the system date.
+
+12. Automatically record at system startup
+
+When the system starts, the eea.py program has a 20-second delay to allow time for the USB flash drive to mount correctly and be ready for use.
+
+In the new kernel, the rc-local.service must be added.
+
+We will use the rc-local.service service.
+
+sudo nano /etc/systemd/system/rc-local.service
+
+[Unit]
+
+Description=rc-local
+
+After=network.target
+
+[Service]
+
+User=root
+
+ExecStart=/home/ensor/Ensor/recorder.sh
+
+[Install]
+
+WantedBy=multi-user.target
+
+Enable the service to start at system startup.
+
+sudo systemctl enable rc-local.service
+
+13. Script program /home/ensor/Ensor/recorder.sh
+
+nano /home/ensor/Ensor/recorder.sh
+
+#!/bin/sh
+
+sudo /home/ensor/Ensor/master_8ch_32bit.py
+
+sudo shutdown -h now
+
+This script starts recording data according to the ensor.conf configuration and, when finished, shuts down the system to save power.
+
+14. Backing up the card
+
+Windows: Win32DiskImager
+
+Linux: dd if=/dev/sda of=/path/to/image
+
+From Raspberry Pi: sudo dd if=/dev/mmcblk0 of=/media/ensor/Ensor384/raspbian.img bs=1M status=progress
