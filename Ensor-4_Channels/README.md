@@ -70,10 +70,13 @@ How to do it:
 2. Configure the RPi5 as the master using a .dts file, setting the clock frequency appropriate for the required sampling rate.
 
 The RPi5, configured as the master, generates the I2S signals:
+
 I2S0_SCLK (GPIO 18, PIN 12)
+
 I2S0_WS (GPIO 19, PIN 35)
 
-3. Configure the TLV320ADC6140 ADC chip as a 4-channel, 32-bit TDM slave. 
+3. Configure the TLV320ADC6140 ADC chip as a 4-channel, 32-bit TDM slave.
+    
 4. Write a program for the RPi5's PIO that does the following:
    Read the I2S0_WS signal (GPIO 19, PIN 35) and, simultaneously, emulate the TDM protocol on PIN 33.
 
@@ -87,8 +90,9 @@ Perform the following steps:
 
 Figure 1 below shows the PIO program in operation.
 
+I2S0_WS (GPIO 19, PIN 35)
 ![PIO_tdm](https://github.com/Mariano-Esteban/Ensor-384kHz-32bit/blob/main/Ensor-4_Channels/Images/PIO_tdm.JPG)
-
+FSYNC (GPIO 13, PIN 33)
 
 Audio recording is done on a USB flash drive connected to the Raspberry Pi
 
