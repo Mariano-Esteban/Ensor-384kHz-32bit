@@ -5,7 +5,7 @@ Audio ADC HAT for the Raspberry Pi.
 The Ensor-4_Channels is a high-resolution analog-to-digital converter for the Raspberry Pi, support sample rates up to 384kHz/32bit in  2 Channels
 and 192kHz/32bit in 4 channels
 
-![Ensor-4_Channels](https://github.com/Mariano-Esteban/Ensor-384kHz-32bit/blob/main/Ensor-4_Channels/images/Ensor-4_channels.jpg)
+![Ensor-4_Channels](https://github.com/Mariano-Esteban/Ensor-384kHz-32bit/blob/main/Ensor-4_Channels/Images/Ensor-4_Channels.jpg)
 
 ## Features:
 
