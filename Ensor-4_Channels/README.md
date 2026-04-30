@@ -87,7 +87,7 @@ Perform the following steps:
 
 Figure 1 below shows the PIO program in operation.
 
-![PIO_tdm](https://github.com/Mariano-Esteban/Ensor-384kHz-32bit/blob/main/Ensor-4_Channels/images/PIO_tdm.jpg)
+![PIO_tdm](https://github.com/Mariano-Esteban/Ensor-384kHz-32bit/blob/main/Ensor-4_Channels/Images/PIO_tdm.JPG)
 
 
 Audio recording is done on a USB flash drive connected to the Raspberry Pi
