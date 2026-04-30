@@ -57,6 +57,40 @@ With a bandwidth of 20Hz to 80kHz, it can be used in the following fields:
 The Ensor-4_Channels card together with the Raspberry Pi 5 card form an automatic audio recording system of very high quality.
 Records 2 audio channels of up to 384000 samples per second and 32 bits per sample o Records 4 audio channels of up to 192000 samples per second and 32 bits per sample
 
+To record 4 audio channels simultaneously with the Raspberry Pi 5, you need to emulate the TDM protocol using the PIO programming, which is only available on the RPI5.
+
+Emulating the TDM protocol on the Raspberry Pi 5 (RPi5) using PIO programming
+To enable simultaneous capture of up to 4 audio channels per I2S input.
+Since the RPi5 has four I2S inputs, SDI0, SDI1, SDI2, and SDI3, it can capture 16 channels of audio simultaneously at 48kHz and 32-bit.
+
+How to do it:
+1. Use an audio capture card such as the "Ensor-4_Channels".
+2. Configure the RPi5 as the master using a .dts file, setting the clock frequency appropriate for the required sampling rate.
+
+The RPi5, configured as the master, generates the I2S signals:
+I2S0_SCLK (GPIO 18, PIN 12)
+I2S0_WS (GPIO 19, PIN 35)
+
+3. Configure the TLV320ADC6140 ADC chip as a 4-channel, 32-bit TDM slave. 
+4. Write a program for the RPi5's PIO that does the following:
+   Read the I2S0_WS signal (GPIO 19, PIN 35) and, simultaneously, emulate the TDM protocol on PIN 33.
+
+Perform the following steps:
+
+- Intercept the I2S0_WS signal from the RPi5.
+- To do this, connect PIN 35 and PIN 36.
+- Using the PIO program, read the state of the I2S0_WS signal on PIN 36.
+- Connect the FSYNC signal input of the TLV320ADC6140 to PIN 33 (GPIO 13).
+- Generate the FSYNC signal on PIN 33 (GPIO 13), emulating the TDM protocol, and send it to the FSYNC pin of the TLV320ADC6140 ADC chip.
+
+Figure 1 below shows the PIO program in operation.
+
+
+
+
+
+
+
 Audio recording is done on a USB flash drive connected to the Raspberry Pi
 
 The Ensor-4_Channels card is compatible with any Raspberry Pi. 3, 4, or 5 for recording 2 channels simultaneously.
